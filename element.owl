@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/element-ontology#"
+     xml:base="http://www.example.org/element-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+    <!--Ontology Declaration-->
+    <owl:Ontology rdf:about="http://www.example.org/element-ontology"/>
+
+    <!--classes-->
+    <owl:Class rdf:about="#Element"/>
+    <owl:Class rdf:about="#Classification"/>
+
+    <owl:Class rdf:about="#Metal">
+        <rdfs:subClassOf rdf:resource="#Classification"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Nonmetal">
+        <rdfs:subClassOf rdf:resource="#Classification"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Metalloid">
+        <rdfs:subClassOf rdf:resource="#Classification"/>
+    </owl:Class>
+
+    
+    <!--object properties --> 
+    <owl:ObjectProperty rdf:about="#hasClassification">
+        <rdfs:domain rdf:resource="#Element"/>
+        <rdfs:range rdf:resource="#Classification"/>
+    </owl:ObjectProperty>
+
+
+    <!--data properties--> 
+    <owl:DatatypeProperty rdf:about="#hasSymbol">
+        <rdfs:domain rdf:resource="#Element"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#hasReason">
+        <rdfs:domain rdf:resource="#Element"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!--individual -->
+     <owl:NamedIndividual rdf:about="#Hydrogen">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>H</hasSymbol>
+        <hasClassification rdf:resource="#Nonmetal"/>
+        <hasReason>Hydrogen is a nonmetal because it is a gas at room temperature and does not conduct electricity well.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Helium">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>He</hasSymbol>
+        <hasClassification rdf:resource="#Nonmetal"/>
+        <hasReason>Helium is a nonmetal because it is an inert gas and does not react chemically.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Lithium">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>Li</hasSymbol>
+        <hasClassification rdf:resource="#Metal"/>
+        <hasReason>Lithium is a metal because it is solid, shiny, malleable, and conducts electricity.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Beryllium">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>Be</hasSymbol>
+        <hasClassification rdf:resource="#Metal"/>
+        <hasReason>Beryllium is a metal because it is solid and conducts electricity.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Boron">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>B</hasSymbol>
+        <hasClassification rdf:resource="#Metalloid"/>
+        <hasReason>Boron is a metalloid because it has properties of both metals and nonmetals.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Carbon">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>C</hasSymbol>
+        <hasClassification rdf:resource="#Nonmetal"/>
+        <hasReason>Carbon is a nonmetal because it is brittle and does not conduct electricity.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Nitrogen">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>N</hasSymbol>
+        <hasClassification rdf:resource="#Nonmetal"/>
+        <hasReason>Nitrogen is a nonmetal because it is a gas at room temperature.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Oxygen">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>O</hasSymbol>
+        <hasClassification rdf:resource="#Nonmetal"/>
+        <hasReason>Oxygen is a nonmetal because it is a gas and does not conduct electricity.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Fluorine">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>F</hasSymbol>
+        <hasClassification rdf:resource="#Nonmetal"/>
+        <hasReason>Fluorine is a nonmetal because it is a highly reactive gas.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Neon">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>Ne</hasSymbol>
+        <hasClassification rdf:resource="#Nonmetal"/>
+        <hasReason>Neon is a nonmetal because it is an inert gas.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Sodium">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>Na</hasSymbol>
+        <hasClassification rdf:resource="#Metal"/>
+        <hasReason>Sodium is a metal because it is solid, shiny, and conducts electricity.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Magnesium">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>Mg</hasSymbol>
+        <hasClassification rdf:resource="#Metal"/>
+        <hasReason>Magnesium is a metal because it conducts electricity and reacts with acids.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Aluminum">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>Al</hasSymbol>
+        <hasClassification rdf:resource="#Metal"/>
+        <hasReason>Aluminum is a metal because it is malleable and conducts electricity.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Silicon">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>Si</hasSymbol>
+        <hasClassification rdf:resource="#Metalloid"/>
+        <hasReason>Silicon is a metalloid because it is semiconducting.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Phosphorus">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>P</hasSymbol>
+        <hasClassification rdf:resource="#Nonmetal"/>
+        <hasReason>Phosphorus is a nonmetal because it is brittle.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Sulfur">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>S</hasSymbol>
+        <hasClassification rdf:resource="#Nonmetal"/>
+        <hasReason>Sulfur is a nonmetal because it does not conduct electricity.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Chlorine">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>Cl</hasSymbol>
+        <hasClassification rdf:resource="#Nonmetal"/>
+        <hasReason>Chlorine is a nonmetal because it is a reactive gas.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Argon">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>Ar</hasSymbol>
+        <hasClassification rdf:resource="#Nonmetal"/>
+        <hasReason>Argon is a nonmetal because it is an inert gas.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Potassium">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>K</hasSymbol>
+        <hasClassification rdf:resource="#Metal"/>
+        <hasReason>Potassium is a metal because it reacts strongly with water.</hasReason>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Calcium">
+        <rdf:type rdf:resource="#Element"/>
+        <hasSymbol>Ca</hasSymbol>
+        <hasClassification rdf:resource="#Metal"/>
+        <hasReason>Calcium is a metal because it conducts electricity and reacts with acids.</hasReason>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
